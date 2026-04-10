@@ -2,9 +2,29 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: k8s-test
+  title: k8s-test
+  description: Azure AI Landing Zone
   annotations:
     github.com/project-slug: a1234567yadav-creator/k8s-test
+    backstage.io/source-template: template:default/azure-ai-gateway-provisioing
+    backstage.io/techdocs-ref: dir:.
+    grafana/tag-selector: testing
+    grafana/alert-label-selector: testing
+  tags:
+    - k8s
+    - forked
+    - terraform
+  links:
+    - url: https://portal.azure.com
+      title: Azure Portal
+      icon: dashboard
+    - url: https://github.com/ajaypoc/demo-az-ai-gw-new
+      title: GitHub Repository
+      icon: github
 spec:
-  type: other
-  lifecycle: unknown
-  owner: hexaware-engineering
+  type: infrastructure
+  lifecycle: production
+  owner: group:default/platform-engineering
+  system: azure-infrastructure
+  dependsOn:
+    - resource:azure-subscription
