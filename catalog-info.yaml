@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: k8s-test
+  annotations:
+    github.com/project-slug: a1234567yadav-creator/k8s-test
+spec:
+  type: other
+  lifecycle: unknown
+  owner: hexaware-engineering
